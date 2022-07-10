@@ -4,14 +4,14 @@ package oop;
 public class Auto {
 	
 	// atributos de la clase 
-	private String color; 
-	private int anio; 
-	private long serie;
-	private String marca; 
-	private String modelo; 
-	private float velocidad;  
-	private float velocidadMaxima;  
-	private boolean encendido; 
+	public String color; 
+	public int anio; 
+	public long serie;
+	public String marca; 
+	public String modelo; 
+	public float velocidad;  
+	public float velocidadMaxima;  
+	public boolean encendido; 
 	
 	// cuando nce el objeto: CONSTRUCTOR
 	public Auto() {
@@ -44,7 +44,7 @@ public class Auto {
 //			System.out.println("Error el auto ya esta apagado");
 //		}
 		if(encendido) {
-			this.isEncendido()       //boolean se generan como isAlgo(), si son wraper Boolean se generan como getAlgo() 
+			//this.isEncendido()       //boolean se generan como isAlgo(), si son wraper Boolean se generan como getAlgo() 
 			while(this.getVelocidad() > 0 ) {
 				frenar(); 
 			}
