@@ -31,7 +31,7 @@ public class ConsultarController extends HttpServlet {
 		if(con !=null) {
 		   try {
 				Statement st = con.createStatement(); 
-				ResultSet rs = st.execute(sql);
+				ResultSet rs = st.executeQuery(sql);
 				
 				// obtengo todos los datos que contienen un producto 
 				Long idProducto = rs.getLong(1); //tomar la primer columna de mi select 
