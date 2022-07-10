@@ -20,9 +20,7 @@ public class CreateController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		//recibe los datos del front 
 		String nombre = req.getParameter("nombre"); 
-		//String precio = req.getParameter("precio");  //convertir en float
-		//float precio = Float.valueOf(req.getParameter("precio"));
-		float precio = 30; 
+		String precio = req.getParameter("precio");  //convertir en float
 		String fechaCreacion= "";   // la vamos a asignar nosotros 
 		String imagen = req.getParameter("imagen"); 
 		String codigo = req.getParameter("codigo"); 
@@ -38,7 +36,11 @@ public class CreateController extends HttpServlet {
 				
 				// cierre dela conexion 
 				con.close();
+				// no funciona :-(((
+				//getServletContext().getRequestDispatcher("/api/ListadoController").forward(req, resp);
+				// cambio la forma de redireccionar desues del alta 
 				
+				resp.sendRedirect(req.getContextPath()+"/api/ListadoController");
 		   } catch(Exception e) {
 			   e.printStackTrace();
 		   } 
