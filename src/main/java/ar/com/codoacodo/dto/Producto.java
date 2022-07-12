@@ -1,6 +1,6 @@
 package ar.com.codoacodo.dto;
 
-import java.sql.Date;
+import java.util.Date; 
 
 public class Producto {
 	private Long idProducto;
@@ -10,18 +10,26 @@ public class Producto {
 	private String imagen; 
 	private String codigo;
 	
-	public Producto(Long idProducto, String nombre, Float precio, Date fecha, String imagen, String codigo) {
-		super();
-		this.idProducto = idProducto;
-		this.nombre = nombre;
-		this.precio = precio;
-		this.fecha = fecha;
-		this.imagen = imagen;
-		this.codigo = codigo;
-	}
+//	public Producto(Long idProducto, String nombre, Float precio, Date fecha, String imagen, String codigo) {
+//		super();
+//		this.idProducto = idProducto;
+//		this.nombre = nombre;
+//		this.precio = precio;
+//		this.fecha = fecha;
+//		this.imagen = imagen;
+//		this.codigo = codigo;
+//	}
 
 	public Producto(Long idProducto2, String nombre2, Float precio2, java.util.Date fecha2, String imagen2,
 			String codigo2) {
+		super();
+		this.idProducto = idProducto2;
+		this.nombre = nombre2;
+		this.precio = precio2;
+		this.fecha = fecha2;
+		this.imagen = imagen2;
+		this.codigo = codigo2;
+		
 		// TODO Auto-generated constructor stub
 	}
 

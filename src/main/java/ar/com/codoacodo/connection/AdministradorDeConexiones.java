@@ -7,14 +7,14 @@ public class AdministradorDeConexiones {
 
 	public static Connection getConnection() {
 		
-		 /* LOCAL
+
 		// es la conexion LOCAL
-		String url ="jdbc:mysql://127.0.0.1:3306/codo-a-codo?serverTimeZone=UTC&usrSSL=false";
-		String user= "root"; 
-		String password =""; 
+		//String url ="jdbc:mysql://127.0.0.1:3306/codo-a-codo?serverTimeZone=UTC&usrSSL=false";
+		//String user= "root"; 
+		//String password =""; 
 		
-		String driverName ="com.mysql.cj.jdbc.Driver";    // mysql o postgres
-		*/		
+		//String driverName ="com.mysql.cj.jdbc.Driver";    // mysql o postgres
+				
 		
 		// ahora para HEROKU 
 		String url = System.getenv("DATASOURCE_URL");

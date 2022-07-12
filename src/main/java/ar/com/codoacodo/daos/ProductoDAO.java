@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
-import java.io.IOException;
 import ar.com.codoacodo.connection.AdministradorDeConexiones;
 import ar.com.codoacodo.dto.Producto;
 
@@ -57,7 +55,7 @@ public class ProductoDAO {
 
 	/*metodos del crud*/
 	public List<Producto> listarProductos() {
-		String sql = "SELECT * FROM PRODUCTO ";
+		String sql = "SELECT * FROM producto ";
 		
 		//Connection
 		Connection con = AdministradorDeConexiones.getConnection();
@@ -66,8 +64,7 @@ public class ProductoDAO {
 		
 		//Statement
 		try {
-			Statement st = con.createStatement();
-			
+			Statement st = con.createStatement(); 
 			//resultset
 			ResultSet rs = st.executeQuery(sql);
 			
@@ -160,7 +157,7 @@ public class ProductoDAO {
 			
 			//VIENE UN SOLO REGISTRO!!!
 			
-			if(rs.next()) {//si existe, hay uno solo
+			while(rs.next()) {//si existe, hay uno solo
 				// rs > sacando los datos
 				Long idProducto = rs.getLong(1);//tomar la primer columna
 				String nombre = rs.getString(2);
