@@ -11,14 +11,17 @@ public class Producto {
 	private String codigo;
 	
 	public Producto(Long idProducto, String nombre, Float precio, Date fecha, String imagen, String codigo) {
-		super(); 
-		this.idProducto = idProducto; 
-		this.nombre = nombre; 
-		this.precio= precio; 
-		this.fecha = fecha; 
-		this.imagen = imagen; 
-		this.codigo = codigo; 
-		
+		super();
+		this.idProducto = idProducto;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.fecha = fecha;
+		this.imagen = imagen;
+		this.codigo = codigo;
+	}
+
+	public Producto(Long idProducto2, String nombre2, Float precio2, java.util.Date fecha2, String imagen2,
+			String codigo2) {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -70,4 +73,6 @@ public class Producto {
 		this.codigo = codigo;
 	}
 
+	
+	
 }

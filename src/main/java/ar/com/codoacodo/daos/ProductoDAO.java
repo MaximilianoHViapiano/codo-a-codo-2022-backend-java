@@ -8,8 +8,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+
+import java.io.IOException;
 import ar.com.codoacodo.connection.AdministradorDeConexiones;
 import ar.com.codoacodo.dto.Producto;
+
 
 public class ProductoDAO {
 
@@ -40,8 +43,9 @@ public class ProductoDAO {
 				String imagen = rs.getString(5);
 				String codigo = rs.getString(6);
 				
-				//campos crear un objeto????
-				prodFromDb = new Producto(idProducto,nombre,precio,fecha,imagen,codigo);
+				//campos crear unro objeto????
+				prodFromDb = new Producto (idProducto, nombre, precio, fecha, imagen, codigo); 
+				
 			}			
 		} catch (SQLException e) {
 			// ERRORES
@@ -57,7 +61,7 @@ public class ProductoDAO {
 		
 		//Connection
 		Connection con = AdministradorDeConexiones.getConnection();
-	
+		//Producto prodFromDb = null;
 		List<Producto> list = new ArrayList<>();
 		
 		//Statement

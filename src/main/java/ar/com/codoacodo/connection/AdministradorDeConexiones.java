@@ -7,14 +7,14 @@ public class AdministradorDeConexiones {
 
 	public static Connection getConnection() {
 		
-		/* 
-		/ es la conexion LOCAL
+		 /* LOCAL
+		// es la conexion LOCAL
 		String url ="jdbc:mysql://127.0.0.1:3306/codo-a-codo?serverTimeZone=UTC&usrSSL=false";
-		String username= "root"; 
+		String user= "root"; 
 		String password =""; 
 		
 		String driverName ="com.mysql.cj.jdbc.Driver";    // mysql o postgres
-		 */		
+		*/		
 		
 		// ahora para HEROKU 
 		String url = System.getenv("DATASOURCE_URL");
@@ -24,12 +24,11 @@ public class AdministradorDeConexiones {
 		
 		
 		// control de errores
-		Connection con; 
+		Connection con= null ; 
 		try {
 			Class.forName(driverName); // carga en memoria el driver 
 			con = DriverManager.getConnection(url,user,password);    // esto me devuelve una conexin que yo me guardo en CON
 		}catch(Exception e) {
-			con = null; 
 			e.printStackTrace();  // muestro el fallo 
 		}
 		return con; 
