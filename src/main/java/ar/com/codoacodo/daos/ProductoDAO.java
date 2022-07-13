@@ -59,7 +59,7 @@ public class ProductoDAO {
 		
 		//Connection
 		Connection con = AdministradorDeConexiones.getConnection();
-		//Producto prodFromDb = null;
+		
 		List<Producto> list = new ArrayList<>();
 		
 		//Statement
